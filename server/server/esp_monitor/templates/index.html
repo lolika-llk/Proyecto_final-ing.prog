@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE HTML><html>
+<head>
+    <title>ESP32</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--fuentes-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <!-- estilo-->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+</head>
+<body>
+    <div class="title">
+        <h2>Controlador ESP32.</h2>
+    </div><br>
+    <div class="medicion">
+            <div class="temp">
+                <i class="fas fa-thermometer-empty tmp"></i>
+                <span class="labels tmp">Temperatura</span>
+                <span id="Temperatura" class="tmp">%TEMPERATURE%</span>
+                <sup>&deg;C</sup><br>
+                <div id="tempbar"></div>
+            </div>
+        <div>
+            <i class="fas fa-tint"></i>
+            <span class="labels">Humedad</span>
+            <span id="Humidity">%HUMIDITY%</span>
+            <sup>&percnt;</sup>
+            <br>
+            <div id="hbar"></div>
+        </div>
+    </div><br><br>
+    <div class="panel">
+        <div class="inicio" id="in">
+            <form>
+                <div>
+                    <label for="username">Nombre de usuario</label><br>
+                    <input type="text" placeholder="Username" name="username" id="username" autocomplete="username">
+                </div>
+                <div>
+                    <label for="pwd">Contraseña</label><br>
+                    <input type="password" placeholder="password" id="pwd" name="pwd" autocomplete="current-password" required>
+                    <button type="button" id="togglePassword" title="Mostrar contraseña"> <i class="fa fa-eye" id="ojo" aria-hidden="true"></i></button>
+                </div>
+                <br>
+                <button type="button"  id="insesion">Iniciar sesion</button>
+            </form>
+        </div>
+        <br>
+        <div class="acciones" id="act">
+            <button id="bov" title="Este botón activa el Ventilador" class="accion inactive" onclick='fan()'>Ventilador</button>
+            <label for="maxtemp">Temperatura a la que se activa el mecanismo:</label><br>
+            <input type="number" id="maxtemp" value="30"><button id="sendtemp" onclick="st()">Ok</button>
+            <br>
+        </div>
+    </div>
+    <br>
+    <div class="panel">
+        <h3>Wip: Historial de mediciones</h3>
+    </div>
+</body>
+<footer>
+    <a class="social" href="https://twitter.com/lolika_llk" title="twitter (X)">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a class="social" href="https://github.com/lolika-llk/Proyecto_final-ing.prog." title="Codigo fuente">
+        <i class="fab fa-github"></i>
+    </a>
+</footer>
+<!--funciones-->
+<script src="{% static 'main.js' %}"></script>

@@ -1,2 +1,5 @@
 .pio
 .vscode
+venv
+__pycache__
+*.sqlite3

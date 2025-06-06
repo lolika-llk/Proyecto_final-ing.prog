@@ -1,0 +1,137 @@
+html{
+    height: 100%;
+    font-family: "Tiny5", Arial;
+    display:inline-block;
+    margin: 1px auto;
+    text-align: center;
+    background-color: rgb(37,40,38);
+    color: rgb(201, 215, 248);
+}
+button{
+    border: none;
+    font-family: "tiny5";
+    border-radius: 2px;
+    background-color: rgb(201, 215, 248);
+    cursor: pointer;
+    transition-duration: 750ms;
+}
+button:hover{
+    scale: 120%;
+    color: rgb(239, 255, 200);
+    background-color: rgb(58, 80, 81);
+}
+.title{
+    font-size: 2.7rem;
+    border-bottom: 2px solid aliceblue;
+}
+.medicion{
+    padding: auto;
+    display: flex;
+    box-sizing: border-box;
+    margin: auto;
+    flex-direction: column;
+    width: 30%;
+    font-size: 1.7rem;
+}
+.panel{
+    display: flex;
+    padding: auto;
+    box-sizing: border-box;
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+    border-width: 5px;
+    border-radius: 15px;
+    flex-direction: column;
+    background: rgba(45, 50, 47, .7);
+    box-shadow: -9px 7px 12px rgba(156, 255, 225, 0.44);
+    transition-duration: 1.3s;
+}
+.panel:hover{
+    transform: translateX(5px) translateY(-10px);
+    box-shadow: -25px 15px 20px rgba(90, 250, 234, 0.532);
+    }
+
+input{
+    color: beige;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: rgb(67, 76, 97);
+    border: none;
+    border-radius: 5px;
+    transition-duration: 300ms;
+    }
+    input:hover{
+        scale: 105%;
+        background-color: rgb(67, 100, 117);
+    }
+footer{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    bottom: 5px;
+    left: 50%;
+}
+.acciones{
+    display:none;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+button.accion{
+    padding: 20px;
+    font-size: calc(1.2rem/0.75);
+    transform: scale(75%);
+    border-radius: 15%;
+    transition-duration: 1s;
+}
+button.accion:hover{
+    transform: scale(100%);
+    border-radius: 5%;
+    font-size: 1.2rem;
+    transform: translateY(-10px);
+}
+button.inactive{
+    border: 3px dashed  rgba(255, 74, 74, 0.633);
+    background-color: rgba(255, 0, 0, 0.47);
+}
+button.inactive:hover{
+    background-color: rgba(255, 74, 74, 0.633);
+}
+button.active{
+    border: 2px solid rgb(64, 229, 149);
+    background-color: rgb(31, 168, 102);
+}
+#maxtemp{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-sizing: content-box;
+}
+.fa-twitter{
+    color: skyblue;
+}
+.fa-github{
+    color: darkkhaki;
+}
+.social{
+    width: 25px;
+    transition-duration: 750ms;
+}
+.social:hover{
+    transform: scale(150%) translateY(-5px);
+}
+.badacces{
+    color: lightcoral;
+    size: 7rem;
+}
+#tempbar{
+    background-color: aqua;
+    height: 5px;
+    transition-duration: 1.5s;
+}
+#hbar{
+    background-color: aqua;
+    height: 5px;
+    transition-duration: 1.75s;
+}
